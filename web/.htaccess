@@ -1,6 +1,6 @@
-
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
+
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
@@ -16,5 +16,4 @@ RewriteRule ^(.*\.php)$ wp/$1 [L]
 RewriteRule . index.php [L]
 
 </IfModule>
-
 # END WordPress

@@ -59,7 +59,9 @@
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
     "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
     "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
-    "test": "npm run -s lint"
+    "test": "npm run -s lint",
+    "build-css": "node-sass \"resources/assets/styles/main.scss\" -o \"resources/assets/styles/main.css\"",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "engines": {
     "node": ">= 6.9.4"
@@ -84,7 +86,8 @@
     "imagemin-mozjpeg": "~7.0.0",
     "imagemin-webpack-plugin": "~2.1.1",
     "import-glob": "~1.5",
-    "node-sass": "~4.8.3",
+    "node-sass": "^4.9.0",
+    "nodemon": "^1.17.4",
     "postcss-loader": "~2.1.0",
     "postcss-safe-parser": "~3.0",
     "resolve-url-loader": "~2.3.0",
@@ -103,7 +106,7 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
-    "bootstrap": "v4.1.1",
+    "bootstrap": "4.0.0-beta.2",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3"
   }
